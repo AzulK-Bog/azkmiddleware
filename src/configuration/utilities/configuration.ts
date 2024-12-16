@@ -1,0 +1,15 @@
+export default () => ({
+  appPort: parseInt(process.env.applicationPort, 10) || 3000,
+  appTempFolder: process.env.applicationTempFolder || 'temp',
+  notSecuredRoutes: process.env.applicationNotSecuredPaths || ['/health'],
+  corsWhiteList: process.env.applicationCorsHosts || '*',
+  backendProxy: process.env.backendUrlProxy || 'http://localhost:3000',
+  redisHost: process.env.dbRedisHost || 'localhost',
+  redisPort: parseInt(process.env.dbRedisPort, 10) || 6379,
+  redisPassword: process.env.dbRedisPassword || '',
+  backendUtilsProxy: process.env.backendUtilsProxy || 'http://localhost:3000',
+  backendUtilsProxyPort: process.env.backendUtilsProxyPort || 3000,
+  backendUtilsProxyPath: process.env.backendUtilsProxyPath || '/utils',
+  nodeRedProxy: process.env.backendNodeRed || 'http://localhost:3000',
+  applicationGlobalPrefix: process.env.APPLICATION_GLOBAL_PREFIX || 'api',
+});
